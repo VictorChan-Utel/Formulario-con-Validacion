@@ -1,0 +1,49 @@
+:root
+{
+    --colorTextos: #49454567;
+}
+
+*,
+::before,
+::after
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: 'Reboto';
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1
+{
+    text-align: center;
+    font-weight: 700;
+}
+
+form
+{
+    background: #fff;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(255,255,255,0.8);
+    border-radius: 10px;
+}
+
+form .grupo
+{
+    position: relative;
+    margin: 45px;
+}
+
+input
+{
+    
+}
