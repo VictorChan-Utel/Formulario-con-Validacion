@@ -15,7 +15,7 @@
 body
 {
     font-family: 'Reboto';
-    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    background-image: linear-gradient(to right, #cfd9df 0%, #e2ebf0 100%);
 
     height: 650px;
     display: flex;
@@ -45,5 +45,84 @@ form .grupo
 
 input
 {
-    
+     background-image: none;
+     color: #c6c6c6;
+     font-size: 18px;
+     padding: 10px 10px 10px 5px;
+     display: block;
+     width: 100%;
+     border: none;
+     border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus
+{
+    outline: none;
+    color: rgb(94, 93,93)
+}
+
+label
+{
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5 ease all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label
+{
+    top: -14px;
+    font-size: 12px;
+    color: #a6c0fe;
+}
+
+.barra
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before
+{
+    content: "";
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background-color: #0093E9;
+    background-image: linear-gradient(357deg, #0093E9 0%, #80D0C7 100%);
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before
+{
+    width: 100%;
+}
+
+button
+{
+    font-family: 'reboto';
+    background: #0093E9;
+    background-image: linear-gradient(357deg, #0093E9 0%, #80D0C7 100%);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color:#fff;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:500px)
+{
+    form{
+        width: 80%;
+    }
 }
